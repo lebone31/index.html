@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Happy Birthday Charlie 🤍</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -63,6 +62,17 @@ body {
   0% { opacity: 1; }
   50% { opacity: 0.6; }
   100% { opacity: 1; }
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
 }
 
 /* ENVELOPE */
@@ -141,17 +151,6 @@ body {
     opacity: 0;
   }
 }
-
-/* BUTTON */
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  background: #fff;
-  color: #000;
-  cursor: pointer;
-}
 </style>
 </head>
 
@@ -163,7 +162,7 @@ button {
 
   <div class="cake">
     <img src="https://i.imgur.com/8YqGkWa.png" alt="Cake">
-    <div class="candles" id="candles">
+    <div class="candles">
       <span class="candle on">🕯️</span>
       <span class="candle on">🕯️</span>
       <span class="candle on">🕯️</span>
@@ -183,31 +182,31 @@ button {
   <div class="book">
     <div class="page-flip">
       <div class="letter">
-        My Sthandwa🤍.<br><br>
+        Sthandwa 🤍<br><br>
 
+        I know we haven’t known each other for a very long time,
+        but somehow you’ve become such an important part of my life.
+        A part I didn’t even know I needed.<br><br>
 
-    
-    I know we haven’t known each other for a very long time, 
-    but somehow you’ve become such an important part of my life.
-    
-    A part i didn't even know I needed. It's like you sneaked in
-    ,stole a peace of my heart and now i'm stuck with you😗
-    and honestly I wouldn't have it any other way <br><br>
+        It’s like you sneaked in, stole a piece of my heart and now
+        I’m stuck with you 😗 — and honestly, I wouldn’t have it any
+        other way.<br><br>
 
-    
-    I want you to know that you are the most cutest, kind, 
-    caring, loving man ever!!!I like your smile, I love your voice
-    I just love everything about you!!🥹and I am sooo grateful for you🥹
-    I could write a whole book about you but I dont 
-    have much space here...<br><br>
+        I want you to know that you are the cutest, kindest,
+        most caring and loving man ever!!!
+        I like your smile, I love your voice,
+        I just love everything about you!! 🥹
+        And I am sooo grateful for you 🥹<br><br>
 
-    I pray this new year of your life overflows with everything
-    your heart desires and endless hapiness❤️.<br><br>
+        I could write a whole book about you,
+        but I don’t have much space here…<br><br>
 
-    Have a good one<br><br>
+        I pray this new year of your life overflows with everything
+        your heart desires and endless happiness ❤️<br><br>
 
-    Happy Birthday, my love 🤍
-    
+        Have a good one.<br><br>
+
+        Happy Birthday, my love 🤍
       </div>
     </div>
   </div>
@@ -247,20 +246,22 @@ function startMic() {
           cakePage.classList.remove("active");
           envelopePage.classList.add("active");
         }, 1000);
-      } else requestAnimationFrame(listen);
+      } else {
+        requestAnimationFrame(listen);
+      }
     }
     listen();
   });
 }
 
 function softHearts() {
-  for (let i=0;i<10;i++) {
+  for (let i = 0; i < 10; i++) {
     const h = document.createElement("div");
-    h.className="heart";
-    h.textContent="🤍";
-    h.style.left=Math.random()*100+"vw";
+    h.className = "heart";
+    h.textContent = "🤍";
+    h.style.left = Math.random() * 100 + "vw";
     heartsDiv.appendChild(h);
-    setTimeout(()=>h.remove(),5000);
+    setTimeout(() => h.remove(), 5000);
   }
 }
 
@@ -273,14 +274,14 @@ function openLetter() {
 }
 
 function burstHearts() {
-  for (let i=0;i<25;i++) {
-    const b=document.createElement("div");
-    b.className="burst";
-    b.textContent="🤍";
-    b.style.setProperty("--x",(Math.random()-0.5)*300+"px");
-    b.style.setProperty("--y",(Math.random()-0.5)*300+"px");
+  for (let i = 0; i < 25; i++) {
+    const b = document.createElement("div");
+    b.className = "burst";
+    b.textContent = "🤍";
+    b.style.setProperty("--x", (Math.random() - 0.5) * 300 + "px");
+    b.style.setProperty("--y", (Math.random() - 0.5) * 300 + "px");
     document.body.appendChild(b);
-    setTimeout(()=>b.remove(),1000);
+    setTimeout(() => b.remove(), 1000);
   }
 }
 </script>
